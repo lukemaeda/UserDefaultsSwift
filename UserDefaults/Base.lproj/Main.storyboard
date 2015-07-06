@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="UserDefaults" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bB-75-lqy">
+                                <rect key="frame" x="16" y="332" width="568" height="30"/>
+                                <color key="backgroundColor" red="0.56794471840000005" green="0.71044822529999996" blue="0.91990214650000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="lK4-ew-z7y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="respondToSaveButtonClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Dfj-pQ-stl"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysO-b4-JTv">
+                                <rect key="frame" x="16" y="51" width="568" height="251"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4s0-y7-wuX">
+                                <rect key="frame" x="16" y="427" width="568" height="36"/>
+                                <color key="backgroundColor" red="0.56794471840000005" green="0.71044822529999996" blue="0.91990214650000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <state key="normal" title="削除">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="respondToDeleteClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kXX-eT-V4Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vi5-XE-6Qa">
+                                <rect key="frame" x="16" y="381" width="568" height="30"/>
+                                <color key="backgroundColor" red="0.5679447184328269" green="0.71044822531661189" blue="0.91990214646464641" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bGf-6p-6sI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <state key="normal" title="読込">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="respondToLoadButtonClick" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Jer-UB-kVf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vi5-XE-6Qa" firstAttribute="trailing" secondItem="3bB-75-lqy" secondAttribute="trailing" id="0Cy-ko-Ozu"/>
+                            <constraint firstItem="4s0-y7-wuX" firstAttribute="trailing" secondItem="Vi5-XE-6Qa" secondAttribute="trailing" id="0Ym-aV-It3"/>
+                            <constraint firstItem="4s0-y7-wuX" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="9rI-zo-e5v"/>
+                            <constraint firstItem="3bB-75-lqy" firstAttribute="leading" secondItem="Vi5-XE-6Qa" secondAttribute="leading" id="APh-IV-Cre"/>
+                            <constraint firstItem="3bB-75-lqy" firstAttribute="top" secondItem="ysO-b4-JTv" secondAttribute="bottom" constant="30" id="RVA-Wm-GYb"/>
+                            <constraint firstItem="ysO-b4-JTv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="31" id="Weh-Sx-zLt"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="4s0-y7-wuX" secondAttribute="bottom" constant="137" id="YEk-wM-Z3F"/>
+                            <constraint firstItem="3bB-75-lqy" firstAttribute="trailing" secondItem="ysO-b4-JTv" secondAttribute="trailing" id="agt-BU-Vgo"/>
+                            <constraint firstItem="4s0-y7-wuX" firstAttribute="top" secondItem="Vi5-XE-6Qa" secondAttribute="bottom" constant="16" id="f8I-lt-Hls"/>
+                            <constraint firstItem="3bB-75-lqy" firstAttribute="leading" secondItem="ysO-b4-JTv" secondAttribute="leading" id="ibl-1J-7HI"/>
+                            <constraint firstItem="Vi5-XE-6Qa" firstAttribute="top" secondItem="3bB-75-lqy" secondAttribute="bottom" constant="19" id="of7-AI-IFc"/>
+                            <constraint firstItem="Vi5-XE-6Qa" firstAttribute="leading" secondItem="4s0-y7-wuX" secondAttribute="leading" id="rmP-WD-YON"/>
+                            <constraint firstItem="3bB-75-lqy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="yJE-ya-aVe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="teString" destination="ysO-b4-JTv" id="Uwh-v8-Fv5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
